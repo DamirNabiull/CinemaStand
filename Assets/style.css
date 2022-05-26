@@ -1,0 +1,19 @@
+.content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1080px;
+    height: 1920px;
+    background-image: url(background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#myVideo {
+    width: 1018;
+    height: 729px;
+    margin-top: 81px;
+}
