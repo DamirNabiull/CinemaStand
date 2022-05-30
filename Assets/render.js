@@ -3,7 +3,7 @@ const myVideo = document.getElementById("myVideo");
 
 ipc.on("play-pause-video", function (evt, message) {
     if (message.playOrPause == 'pause') {
-        myVideo.load();
+        // myVideo.load();
         console.log('pause');
     }
     else {
@@ -11,4 +11,9 @@ ipc.on("play-pause-video", function (evt, message) {
         myVideo.play();
         console.log('play');
     }
+});
+
+myVideo.addEventListener('ended', (event) => {
+    myVideo.load();
+    myVideo.play();
 });

@@ -33,8 +33,8 @@ app.whenReady().then(() => {
 		}
 		else if (input.key == '1' && input.type == 'keyDown' && input.key != prevKey) {
 			prevKey = input.key;
-			// playOrPause = 'pause';
-			// win.webContents.send("play-pause-video", { playOrPause });
+			playOrPause = 'pause';
+			win.webContents.send("play-pause-video", { playOrPause });
 		}
 	});
 
