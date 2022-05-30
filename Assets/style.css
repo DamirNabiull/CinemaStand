@@ -1,3 +1,7 @@
+* {
+    overflow: hidden;
+}
+
 .content {
     position: absolute;
     width: 1080px;
