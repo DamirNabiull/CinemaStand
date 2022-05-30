@@ -1,11 +1,11 @@
 const { app, BrowserWindow } = require('electron');
-var prevKey = '2';
+var prevKey = '1';
 var playOrPause = 'pause';
 
 app.whenReady().then(() => {
 	const win = new BrowserWindow({
-		width: 1080,
-		height: 1920,
+		width: 1920,
+		height: 1080,
 		transparent: false,
 		hasShadow: false,
 		frame: false,
@@ -26,15 +26,15 @@ app.whenReady().then(() => {
 	});
 
 	win.webContents.on("before-input-event", (event, input) => {
-		if (input.key == '1' && input.type == 'keyDown' && input.key != prevKey) {
+		if (input.key == '2' && input.type == 'keyDown' && input.key != prevKey) {
 			prevKey = input.key;
 			playOrPause = 'play';
 			win.webContents.send("play-pause-video", { playOrPause });
 		}
-		else if (input.key == '2' && input.type == 'keyDown' && input.key != prevKey) {
+		else if (input.key == '1' && input.type == 'keyDown' && input.key != prevKey) {
 			prevKey = input.key;
-			playOrPause = 'pause';
-			win.webContents.send("play-pause-video", { playOrPause });
+			// playOrPause = 'pause';
+			// win.webContents.send("play-pause-video", { playOrPause });
 		}
 	});
 

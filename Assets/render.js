@@ -7,6 +7,7 @@ ipc.on("play-pause-video", function (evt, message) {
         console.log('pause');
     }
     else {
+        myVideo.load();
         myVideo.play();
         console.log('play');
     }
