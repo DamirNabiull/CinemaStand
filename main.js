@@ -38,5 +38,8 @@ app.whenReady().then(() => {
 		}
 	});
 
+	playOrPause = 'play';
+	win.webContents.send("play-pause-video", { playOrPause });
+
 	win.loadFile('Assets/index.html');
 })
