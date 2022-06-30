@@ -18,6 +18,14 @@
     transform: rotate(-90deg) translateX(-100%);
 }
 
+.InformationQR {
+    position: absolute;
+    top: 855px;
+    left: 920px;
+    width: 160px;
+    height: 172.84px;
+}
+
 #myVideo {
     width: 1018px;
     height: 729px;
